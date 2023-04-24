@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Code Loader in CSS</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://codepen.io/depy/pen/LaXVEK.css'>
+  
+<style>
+/*
+
+*/
+
+section.loader {
+  font-family: Consolas, monaco, monospace;
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background-color:#232427;
+  
+  color:#FF893A;
+}
+
+section.loader .loader-center {
+  width:300px;
+  height:100px;
+  line-height:100px;
+  
+  margin:0 auto;
+  text-align:center;
+  font-size:38px;
+  letter-spacing:-6px;
+  
+  position:absolute;
+  top:50%; left:50%;
+  margin-left:-150px; margin-top:-50px;
+  
+}
+
+section.loader .loader-center .chars .dots .char {
+  font-size:150%;
+  display:inline-block;
+}
+
+/* animation starts here */
+.dots .dot {
+  position:relative;
+  top:0; left:0; 
+}
+
+.dot._dot-1 {
+  -webkit-animation:dot_1 1s ease-in-out infinite;
+          animation:dot_1 1s ease-in-out infinite;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dot._dot-2 {
+  -webkit-animation:dot_2 1s ease-in-out infinite;
+          animation:dot_2 1s ease-in-out infinite;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-delay:1s;
+          animation-delay:1s;
+}
+
+.dot._dot-3 {
+  -webkit-animation:dot_3 1s ease-in-out infinite;
+          animation:dot_3 1s ease-in-out infinite;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-delay:0.5s;
+          animation-delay:0.5s;
+}
+
+
+@-webkit-keyframes dot_1 {
+  0% {
+    top:0;
+    left:0;
+  }
+  
+  50% {
+    top:30px;
+    left:20px;
+  }
+  
+  100% {
+    top:0px;
+    left:40px;
+  }
+}
+
+
+@keyframes dot_1 {
+  0% {
+    top:0;
+    left:0;
+  }
+  
+  50% {
+    top:30px;
+    left:20px;
+  }
+  
+  100% {
+    top:0px;
+    left:40px;
+  }
+}
+
+
+@-webkit-keyframes dot_2 {
+  0% {
+    top:0;
+    left:0;
+  }
+  
+  50% {
+    top:-30px;
+    left:20px;
+  }
+  
+  100% {
+    top:0px;
+    left:40px;
+  }
+}
+
+
+@keyframes dot_2 {
+  0% {
+    top:0;
+    left:0;
+  }
+  
+  50% {
+    top:-30px;
+    left:20px;
+  }
+  
+  100% {
+    top:0px;
+    left:40px;
+  }
+}
+
+
+@-webkit-keyframes dot_3 {
+  0% {
+    top:0;
+    left:0;
+  }
+  
+  50% {
+    top:-30px;
+    left:-40px;
+  }
+  
+  100% {
+    top:0px;
+    left:-80px;
+  }
+}
+
+
+@keyframes dot_3 {
+  0% {
+    top:0;
+    left:0;
+  }
+  
+  50% {
+    top:-30px;
+    left:-40px;
+  }
+  
+  100% {
+    top:0px;
+    left:-80px;
+  }
+}
+
+
+
+
+
+section .author {
+  position:fixed;
+  top:0; bottom:0;
+  left:0px;
+  
+  font-size:80%;
+  transform:rotate(-10deg) translate(50px, 20px);
+  
+  padding:5px 0;
+  text-align:center;
+  
+  color:#eee;
+  opacity:0.8;
+}
+
+section .author a {
+  color:#78ECB4;
+  text-decoration:none;
+}
+
+section .author a:hover {
+  color:#60D69D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* Affiliate
+*/
+.affiliate-container .the-text {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.affiliate-container {
+  opacity: 0.6;
+  position: absolute;
+  right: -20px;
+  top: 0px;
+  transform: scale(.8);
+  transition: 0.2s all ease-in-out;
+  margin-top: 0;
+  justify-content: flex-end;
+}
+
+.affiliate-container:hover {
+  opacity: 0.8;
+  transform: scale(1);
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <section class='loader'>
+  <div class='loader-center'>
+    <div class='chars'>
+      <span class='char brace'>{</span>
+      <span class='dots'>
+        <span class='char dot _dot-1'>.</span>
+        <span class='char dot _dot-2'>.</span>
+        <span class='char dot _dot-3'>.</span>
+      </span>
+      <span class='char brace'>}</span>
+    </div>
+  </div>
+  
+  
+  <article class='author'>
+    By <a href='http://www.stramaxon.com' target='_blank'>Deepak Kamat</a> <a href='https://twitter.com/xxxdepy'>@xxxdepy</a>
+  </article>
+  
+  
+  <div class="affiliate-container">
+  <a href="https://wordpress.com/alp/?aff=17623&cid=1874995" target="_blank" class="wp-overlay-link"></a>
+  <div class="wp-icon-circle">
+    <span>WP</span>
+  </div>
+  
+  <div class="the-text">
+    <span>Get your website built on WordPress.com today!</span>
+  </div>
+</div>
+  
+</section>
+
+
+<a style="opacity: 0.5;position: fixed; bottom: 0; left: 20px; right: 20px;display: block; margin: 20px auto; width: 200px;" href="https://www.buymeacoffee.com/WVxP4ZL3C" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(0,0, 0, 0.5) !important;" ></a>
+  
+  
+  
+  
+
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+</body>
+
+</html>
+ 
